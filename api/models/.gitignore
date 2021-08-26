@@ -1,0 +1,15 @@
+  
+# ## Arquivos compilados / otimizados / DLL por byte
+__pycache__/
+!**/__pycache__/
+
+### VisualStudioCode ###
+.vscode/*      # Maybe .vscode/**/* instead - see comments
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
