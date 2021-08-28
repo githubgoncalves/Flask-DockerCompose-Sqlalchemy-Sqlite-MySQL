@@ -18,7 +18,7 @@ tipo_database = os.getenv("TIPO_DATABASE")
 if not tipo_database:
     tipo_database = DataBase.SQLLITE.value
 
-if not tipo_database == DataBase.SQLLITE.value:
+if tipo_database == DataBase.SQLLITE.value:
     print("Creating database ....")
     create_datebase.CreateDataBase(tipo_database)
 
