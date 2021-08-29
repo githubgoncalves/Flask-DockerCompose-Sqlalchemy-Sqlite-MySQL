@@ -9,7 +9,7 @@ class DbConnectionHandler():
     """Sqlalchemy database connection"""
 
     def __init__(self,database: str):
-        if(database == DataBase.MYSQL.value):
+        if(database == DataBase.MYSQL.name):
            self.__connection_string = "mysql+pymysql://root:telavita@mysql-db:3306/telavita"
         else:
             self.__connection_string = 'sqlite:///'+file_path

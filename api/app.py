@@ -16,9 +16,9 @@ CORS(app)
 """ Selecionar qual database vai ser utilizado.."""
 tipo_database = os.getenv("TIPO_DATABASE")
 if not tipo_database:
-    tipo_database = DataBase.SQLLITE.value
+    tipo_database = DataBase.SQLLITE.name
 
-if tipo_database == DataBase.SQLLITE.value:
+if tipo_database == DataBase.SQLLITE.name:
     print("Creating database ....")
     create_datebase.CreateDataBase(tipo_database)
 
