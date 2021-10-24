@@ -7,15 +7,15 @@ services:
     container_name: mysql_container
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: telavita
-      MYSQL_DATABASE: telavita
+      MYSQL_ROOT_PASSWORD: api
+      MYSQL_DATABASE: api
     ports:
       - "3306:3306"
     cap_add:
       - SYS_NICE  # Desabilitar o aviso "mbind: Operation not permitted"
     container_name: banco-dados-mysql
     networks:
-      - telavita-network
+      - api-network
       
   adminer:
     image: adminer:4
@@ -25,7 +25,7 @@ services:
       - 8080:8080
     container_name: admin-mysql
     networks:
-      - telavita-network
+      - api-network
 
   api:
     depends_on:
@@ -36,11 +36,11 @@ services:
     volumes:
       - ./api:/api
     environment:
-      - APP_NAME=Telavita
+      - APP_NAME=API
       - TIPO_DATABASE=SQLLITE #SQLLITE OR MYSQL
     container_name: micro-service-flask
     networks:
-      - telavita-network
+      - api-network
     
   nginx:
     build: ./nginx/
@@ -48,8 +48,8 @@ services:
     ports:
       - "8084:8084"
     networks:
-      - telavita-network
+      - api-network
 
 networks: 
-  telavita-network:
+  api-network:
     driver: bridge

@@ -3,14 +3,13 @@
 
 ## Resumo:
 
-Esse foi um desafio de desenvolvimento Backend da TelaVita! 
 As APIs REST são construídas usando o framework Flask e podem ser utilizadas com os Bancos de Dados MySQL ou SqlLite. 
 Os contêineres do Docker são usados ​​para o ambiente de desenvolvimento.
 
 ### Estrutura do projeto
 
 ```bash
-PROJETO-BACKEND-MASTER /
+Flask-Nginx-DockerCompose-Sqlalchemy-Sqlite-MySQL /
 ├── api
 │   ├── controllers
 │   │   ├── __init__.py
@@ -66,14 +65,14 @@ PROJETO-BACKEND-MASTER /
 
 Clone o projeto usando o comando:
 ```bash
-git clone https://gitlab.com/githubgoncalves/projeto-backend.git
+git clone https://github.com/githubgoncalves/Flask-Nginx-DockerCompose-Sqlalchemy-Sqlite-MySQL.git
 ```
 
 ### Como iniciar o aplicativo (usando Docker Compose)
 
 Vá para o diretório do projeto:
 ```bash
-cd PROJETO-BACKEND-MASTER 
+cd Flask-Nginx-DockerCompose-Sqlalchemy-Sqlite-MySQL
 ```
 Execute o aplicativo com o seguinte comando para executar os containers docker:
 ```bash
@@ -115,7 +114,7 @@ http://localhost:5000/api/departamentos/
 
 # Base de Dados
 
-Na pasta projeto-backend-master/db tem o modelo de dados e o script para criação das tabelas no MySQL. 
+Na pasta Flask-Nginx-DockerCompose-Sqlalchemy-Sqlite-MySQL/db tem o modelo de dados e o script para criação das tabelas no MySQL. 
 
 ## SQL LITE
 
@@ -127,12 +126,12 @@ http://127.0.0.1:8080/
 
 - server: mysql-db
 - usuario: root
-- senha: telavita
-- base: telavita
+- senha: api
+- base: api
 
 ## Scripts - MySQL
 
-Executar na base do MySQL via Adminier os scripts de criação das tabelas (projeto-backend-master/db/scripts-sql.sql)
+Executar na base do MySQL via Adminier os scripts de criação das tabelas (Flask-Nginx-DockerCompose-Sqlalchemy-Sqlite-MySQL/db/scripts-sql.sql)
 
 **Contato com [DANIEL GONÇALVES](danielgoncalves.info@gmail.com)!**
 

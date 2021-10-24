@@ -29,8 +29,8 @@ def create_app():
 
     api_doc = Api(app,
         version='1.0',
-        title='Doc API TelaVita',
-        description='API TelaVita',
+        title='Doc API',
+        description='API',
         doc='/docs'
     )
 
